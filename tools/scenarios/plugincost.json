@@ -1,0 +1,25 @@
+{
+  "name": "plugincost",
+  "note": "What one AMXX plugin costs, by pausing it. Both cases run back to back on the same server with the same players, so the only difference is the plugin. Set the plugin name below.",
+
+  "host": "127.0.0.1",
+  "port": 27015,
+
+  "duration": 120,
+  "warmup": 20,
+  "repeat": 3,
+  "level": 1,
+
+  "cases": [
+    {
+      "name": "on",
+      "commands": ["amx_pausecfg enable PLUGIN.amxx"]
+    },
+    {
+      "name": "off",
+      "commands": ["amx_pausecfg pause PLUGIN.amxx"]
+    }
+  ],
+
+  "teardown": ["amx_pausecfg enable PLUGIN.amxx"]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "baseline",
+  "note": "What this server normally looks like. Run it, change something, run it again under a different case name, and compare.",
+
+  "host": "127.0.0.1",
+  "port": 27015,
+
+  "duration": 120,
+  "warmup": 30,
+  "repeat": 3,
+  "level": 1,
+
+  "cases": [
+    {
+      "name": "before",
+      "note": "Leave the server exactly as it is."
+    }
+  ]
+}

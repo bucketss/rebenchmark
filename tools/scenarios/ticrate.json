@@ -1,0 +1,23 @@
+{
+  "name": "ticrate",
+  "note": "sys_ticrate 1300 vs 2000, interleaved so host drift lands on both. Compare t1300*_*.json vs t2000*_*.json. over_2_ticks is per ticrate, so read the period histogram for frames over 1 ms.",
+
+  "host": "127.0.0.1",
+  "port": 27015,
+
+  "duration": 120,
+  "warmup": 15,
+  "repeat": 1,
+  "level": 0,
+
+  "cases": [
+    { "name": "t1300a", "cvars": { "sys_ticrate": 1300 } },
+    { "name": "t2000a", "cvars": { "sys_ticrate": 2000 } },
+    { "name": "t1300b", "cvars": { "sys_ticrate": 1300 } },
+    { "name": "t2000b", "cvars": { "sys_ticrate": 2000 } },
+    { "name": "t1300c", "cvars": { "sys_ticrate": 1300 } },
+    { "name": "t2000c", "cvars": { "sys_ticrate": 2000 } }
+  ],
+
+  "teardown": ["sys_ticrate 1300"]
+}
